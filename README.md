@@ -2,6 +2,7 @@ kidsil:yahoo-finance
 ====================
 
 Based on [ajbarry:yahoo-finance](https://github.com/ajbarry/meteor-yahoo-finance) but updated more frequently + tests are fixed.
+
 Provides a Meteor server-side interface to [node-yahoo-finance](https://github.com/pilwon/node-yahoo-finance) through
 a ```YahooFinance``` object.
 
