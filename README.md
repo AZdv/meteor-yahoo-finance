@@ -1,4 +1,4 @@
-ajbarry:yahoo-finance
+kidsil:yahoo-finance
 ====================
 
 Provides a Meteor server-side interface to [node-yahoo-finance](https://github.com/pilwon/node-yahoo-finance) through
@@ -70,6 +70,19 @@ YahooFinance.historical({symbols:['AAPL','GOOGL','YHOO'], from:'2014-06-02', to:
 ```
 
 ### Snapshot Quotes
+
+#### Single Quote
+
+```javascript
+YahooFinance.snapshot({symbol:'YHOO', fields:['s','n']})
+```
+
+*yields:*
+
+```javascript
+{symbol: 'YHOO', name: 'Yahoo! Inc.'}
+```
+#### Multiple Quotes
 
 ```javascript
 YahooFinance.snapshot({symbols:['AAPL','GOOGL','YHOO'], fields:['s','n']})
