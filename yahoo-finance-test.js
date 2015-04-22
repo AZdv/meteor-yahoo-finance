@@ -71,7 +71,23 @@ Tinytest.add('YahooFinance - Snapshot Function Export', function(test) {
   test.instanceOf(YahooFinance.snapshot, Function, "Expected YahooFinance.snapshot to be defined");
 });
 
-Tinytest.add('YahooFinance - Snapshot Quote', function(test) {
+Tinytest.add('YahooFinance - Snapshot Quote (single)', function(test) {
+    var symbol = 'YHOO';
+    var fields = ['s','n'];
+    var expectedSnapshot = {
+        name:'Yahoo! Inc.',
+        symbol:'YHOO'
+    };
+
+    var snapshot = YahooFinance.snapshot({symbol:symbol, fields:fields});
+    // console.log(snapshot);
+
+    test.instanceOf(snapshot, Object);
+    test.equal(snapshot, expectedSnapshot);
+});
+
+
+Tinytest.add('YahooFinance - Snapshot Quote (multiple)', function(test) {
     var symbols = ['AAPL','GOOGL','YHOO'];
     var fields = ['s','n'];
     var expectedSnapshots = [
