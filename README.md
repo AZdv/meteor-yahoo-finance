@@ -1,4 +1,4 @@
-kidsil:yahoo-finance
+azdev:yahoo-finance
 ====================
 
 Based on [ajbarry:yahoo-finance](https://github.com/ajbarry/meteor-yahoo-finance) but updated more frequently + tests are fixed.
